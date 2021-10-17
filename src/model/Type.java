@@ -1,5 +1,6 @@
 package model;
 
-public class Type {
+public enum Type {
+	TI, CC, PP, CE;
 
 }
