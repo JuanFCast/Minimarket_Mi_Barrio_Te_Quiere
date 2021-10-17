@@ -1,6 +1,6 @@
 package model;
 
-public class Person {
+public class User {
 	
 	// Atributes
 	private Type type;
@@ -8,7 +8,7 @@ public class Person {
 	
 	
 	// Constructor
-	public Person(Type type, String numID) {
+	public User(Type type, String numID) {
 		this.type=type;
 		this.numID=numID;
 	}
