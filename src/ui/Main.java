@@ -27,10 +27,10 @@ public class Main {
 
 				switch(option) {
 				case 1:
-					pp.registerNewPerson();	
+					pp.registerUser();	
 					break;
 				case 2:
-					pp.consultAttempts();
+					pp.attemptsMade();
 					break;
 
 				}
@@ -43,20 +43,20 @@ public class Main {
 	}
 
 	public int menu() {
-		System.out.println("=====================================\n"
+		System.out.println("======================================\n"
 				+ "== Bienvenid@ a Mi Barrio Te Quiere ==\n"
 				+ "===========  Mini-Mercado  ===========\n"
 				+ "======================================");
 		System.out.println("Elija una opcion que desea realizar: \n"+
 				"(1) Registrar el ingreso de una nueva persona\n"+
 				"(2) Consultar la cantidad de personas que han intentado ingresar \n"+
-				"(3) Salir del programa\n");
+				"(3) Salir del programa");
 
 		int option = Integer.parseInt(reader.nextLine());
 		return option;
 	}
 
-	public  void registerNewPerson() {
+	public  void registerUser() {
 		int option = 0;
 		Type type = null;
 		do {
@@ -66,7 +66,7 @@ public class Main {
 						"(1) TI - Tarjeta de Identidad\n"+
 						"(2) CC - Cedula de Ciudadania \n"+
 						"(3) PP - Pasaporte\n"+
-						"(4) CE - Cedula de Extranjeria\n");
+						"(4) CE - Cedula de Extranjeria");
 				option=Integer.parseInt(reader.nextLine());
 
 			}catch(NumberFormatException nfe) {
@@ -95,8 +95,10 @@ public class Main {
 		String id=reader.nextLine();
 
 		try {
-			mini_market.register(type, id);
-			System.out.println("\n	La persona ha sido registrada exitosamente\n");
+			mini_market.registerUser(type, id);
+			System.out.println("\n===========================================\n"
+					+ "La persona fue registrada exitosamente!"
+					+ "\n===========================================\n");
 		}catch(NoWithTIException nwt) {
 			System.out.println("\n===========================================\n"
 					+ "No se permite el registro a Menores de Edad"
@@ -110,10 +112,10 @@ public class Main {
 		}
 	}
 
-	public void consultAttempts() {
-		System.out.println("===Cantidad de personas que han intentado ingresar===\n");
-		System.out.println("Actualmente han intentado ingresar "+ mini_market.getAttemps()+" personas\n");
-
+	public void attemptsMade() {
+		System.out.println("=====================================================\n"
+				+ "====Actualmente han intentado ingresar "+ mini_market.getAttemps()+" personas===="
+				+ "\n=====================================================\n");
 	}
 
 

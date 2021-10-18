@@ -15,7 +15,7 @@ public class Mini_Market {
 		attemps=0;
 	}
 
-	public ArrayList<User> getPeopleRegistered() {
+	public ArrayList<User> getUserRegistered() {
 		return userRegistered;
 	}
 
@@ -32,7 +32,7 @@ public class Mini_Market {
 	}
 		
 	
-	public void register(Type type, String numID) throws NoWithTIException, NoPicoCedulaException{
+	public void registerUser(Type type, String numID) throws NoWithTIException, NoPicoCedulaException{
 		attemps++;
 		if(type==Type.TI) {
 			throw new NoWithTIException();
