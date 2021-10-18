@@ -22,7 +22,7 @@ class Mini_MarketTest {
 	//(1) Puede ingresar al minimercado por cumplir todas las condiciones
 	@Test
 	public void testRegister1() {
-		setupScenary1();
+		setupScenary();
 		if(today%2 == 0) {
 			try {
 				Type type = Type.CC;	
@@ -57,7 +57,7 @@ class Mini_MarketTest {
 	//(2) El usuario que sí pudo ingresar, queda registrado en el arreglo total y en el arreglo de personas ingresadas
 	@Test
 	public void testRegister2() {
-		setupScenary1();
+		setupScenary();
 		if(today%2 == 0) {
 			try {
 				Type type = Type.CC;	
@@ -94,7 +94,7 @@ class Mini_MarketTest {
 	//(3) NO puede ingresar al minimercado por ser menor de edad
 	@Test
 	public void testRegister3() {
-		setupScenary1();
+		setupScenary();
 		Type type = Type.TI;	
 		String numID= "1006071586";
 
@@ -116,7 +116,7 @@ class Mini_MarketTest {
 	//(4) NO se puede registrar porque no le corresponde el día de acuerdo con el número de su cédula y el día del mes
 	@Test
 	public void testRegister4() {
-		setupScenary1();
+		setupScenary();
 		if(today%2 == 0) {
 			try {
 				Type type = Type.CC;	
