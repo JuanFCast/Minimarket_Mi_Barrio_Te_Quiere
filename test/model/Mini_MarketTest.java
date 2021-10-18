@@ -15,7 +15,7 @@ class Mini_MarketTest {
 	private int today = LocalDateTime.now().getDayOfMonth();
 	private Mini_Market mini_market;
 
-	public void setupScenary1() {
+	public void setupScenary() {
 		mini_market=new Mini_Market();
 	}
 	
