@@ -32,6 +32,7 @@ public class Mini_Market {
 	}
 		
 	
+	
 	public void registerUser(Type type, String numID) throws NoWithTIException, NoPicoCedulaException{
 		attemps++;
 		if(type==Type.TI) {
@@ -39,10 +40,13 @@ public class Mini_Market {
 		}
 		switch(type) {
 		case CC:
+			type = Type.CC;
 			break;
 		case PP:
+			type = Type.PP;
 			break;
 		case CE:
+			type = Type.CE;
 			break;
 		default:
 			break;
